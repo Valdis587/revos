@@ -1,0 +1,139 @@
+//@import "owl.carousel.scss";
+@import "node_modules/swiper/swiper.scss";
+@import "node_modules/swiper/modules/navigation.scss";
+@import "node_modules/swiper/modules/effect-fade.scss";
+@import "node_modules/swiper/modules/thumbs.scss";
+@import "node_modules/swiper/modules/pagination.scss";
+
+@import "base/null.scss";
+@import "base/mixin";
+:root {
+   --ColorThemePrimary: #ff5e00;
+   --ColorThemeDuble: #2d2d2d;
+   --ColorRed: #ff2d37;
+   --ColorTopLine: #2d2d2d;
+   --ColorText: #686767;
+   --ColorButton: #F89320;
+   --ColorButtonShop: #ff5e00;
+   --ColorButtonShopHover: #2d2d2d;
+   --ColorWhite: #ffffff;
+   --ColorButtonHover: #29AAE2;
+   --ColorLink: #2e4a97;
+   --ColorLinkHover: #4d7af7;
+   --ColorCount: #2d2d2d;
+   --yith-wcan-labels_style_background_hover: #ff5e00;
+    --yith-wcan-filters_colors_accent: #ff5e00;
+    --yith-wcan-anchors_style_text_hover:  #ff5e00;
+    --yith-wcan-anchors_style_text_active: #ff5e00;
+    --badgickSale: #ff2d37;
+    --badgickNew: #3599ff;
+    --badgickHit: #098524;
+}
+
+$minWidth: 320;
+$maxWidthContainer: 1590;
+$padding: 15;
+
+$ColorThemePrimary: var(--ColorThemePrimary);
+$ColorThemeDuble: var(--ColorThemeDuble);
+$ColorRed: var(--ColorRed);
+$ColorTopLine: var(--ColorTopLine);
+$ColorText: var(--ColorText);
+$ColorButton: var(--ColorButton);
+$ColorButtonShop: var(--ColorButtonShop);
+$ColorButtonShopHover: var(--ColorButtonShopHover);
+$ColorWhite: var(--ColorWhite);
+$ColorButtonHover: var(--ColorButtonHover);
+$ColorLink: var(--ColorLink);
+$ColorLinkHover: var(--ColorLinkHover);
+$ColorCount: var(--ColorCount);
+
+
+
+.container {
+   max-width: #{$maxWidthContainer}px;
+   padding: 0 #{$padding}px;
+   margin: 0 auto;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   overflow-x: hidden;
+   z-index: 1;
+}
+.content-wrapper {
+   flex-grow: 1;
+   margin: 212px 0 50px 0;
+   max-width: 100%;
+   height: 100%;
+   overflow: hidden;
+   //position: relative;
+  // z-index: -1;
+}
+.title-home-wrapper {
+   text-align: center;
+   margin: 50px 0 20px 0;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   padding: 0 10px;
+   @media (max-width: 760px) {
+      margin: 20px 0;
+  }
+}
+.title-home span {
+   @include funcAdaptiv(font-size, 25, 40);
+   line-height: 110%;
+   font-weight: 600;
+   position: relative;
+}
+.title-home span::after, .title-home span::before {
+   content: "";
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border-radius: 100%;
+   background-color: $ColorThemePrimary;
+   top: 60%;
+   transform: translateY(-60%);
+}
+.title-home span::after {
+   right: -20px;
+}
+.title-home span::before {
+   left: -20px;
+}
+.desc-home {
+   font-size: 16px;
+   line-height: 110%;
+   font-weight: 500;
+   max-width: 900px;
+   margin: 0 auto;
+}
+footer {
+   margin-top: auto;
+}
+body {
+   color: $ColorText;
+   background-color: $ColorWhite;
+}
+
+
+
+@import "fonts";
+@import "animations.scss";
+@import "./wp/wpstyle.scss";
+@import "header";
+@import "headpanel.scss";
+@import "woo/woo.scss";
+@import "setting";
+
+@import "cart/cart-reviews.scss";
+@import "cart/cart-news.scss";
+@import "single.scss";
+@import "footer";
+
+

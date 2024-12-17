@@ -1,0 +1,16 @@
+.social-list {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 20px;
+   li {
+        border: 1px solid $ColorText;
+        padding: 5px;
+        border-radius: 3px;
+        transition: all 0.3s ease 0.3s;
+    }
+    li:hover {
+        background-color: $ColorThemePrimary;
+        color: $ColorWhite;
+    }
+}
