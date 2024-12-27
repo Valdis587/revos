@@ -74,10 +74,11 @@ $('.sidebar__sub-category > i').click(function() {
     
     });
 
-    $('.header__menu-category-wrapp').click(function() {
+    $('.header__menu-category-wrapp a').click(function() {
+        $('.header__menu-cat').toggleClass('open-menu-cat');
         $('.header__menu-primary').removeClass('open-menu');
         $('.woocommerce-mini-cart').removeClass('open-woocommerce-mini-cart');
-        $('.header__menu-cat').toggleClass('open-menu-cat');
+        
     
     });
 

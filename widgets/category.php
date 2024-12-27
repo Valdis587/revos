@@ -66,10 +66,7 @@ class Caregory_Widget extends WP_Widget {
                             if($children_terms) { ?>
                                 <li class="sidebar__link sidebar__sub-category"><?php if($image) { ?><a href="<?php echo get_category_link($term->term_id);?>"><img src="<?php echo $image; ?>" alt="<?php echo $term->name;?>"></a><?php } ?><a href="<?php echo get_category_link($term->term_id);?>"><?php echo $term->name;?></a><i class="icon-angle-down"></i>
                                     <ul class="sidebar__sub-menu">
-                                        <?php foreach ($children_terms as $children_term) { 
-                                              $thumbnail_id =get_term_meta($children_term->term_id, 'thumbnail_id', true );
-                                              $image = wp_get_attachment_url( $thumbnail_id);
-                                            ?>
+                                        <?php foreach ($children_terms as $children_term) { ?>
                                             <li class="sidebar__link"><?php if($image) { ?><a href="<?php echo get_category_link($term->term_id);?>"><img src="<?php echo $image; ?>" alt="<?php echo $term->name;?>"></a><?php } ?><a  href="<?php echo get_category_link($children_term->term_id);?>"><?php echo $children_term->name; ?></a></li>
                         
                                         <?php } ?>

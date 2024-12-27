@@ -86,13 +86,21 @@
      display: flex;
      flex-direction: column;
      row-gap: 20px;
- 
-     .cart { 
-        @media(max-width: 420px) {
-            display: flex;
-            flex-direction: column;
-            row-gap: 10px;
+     .woocommerce-product-details__short-description {
+        p {
+            line-height: 110%;
         }
+     }
+     .shop__add_to_cart_wrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: flex-start;
+           }
+    }
+   .cart {
         .quantity {
             .number-minus, .number-plus {
                 transition: all 0.3s ease 0.3s;
@@ -106,22 +114,21 @@
       .yith-wcwl-add-to-wishlist-button__label {
         display: none;
       }
-      .yith-wcwl-add-to-wishlist-button {
-        display: block;
-        width: 42px;
-        position: absolute;
-        top: -69px;
-        //left: 310px;
-        right: -290px;
-        z-index: 10;
-        height: 42px;
+      .yith-add-to-wishlist-button-block {
+        margin: 0;
+    }
+    .yith-wcwl-add-to-wishlist-button {
+        align-self: center;
+        align-items: center;
+        //width: 40px;
+        //height: 40px;
         background-color: $ColorButton;
         color: $ColorWhite;
         border: 1px solid $ColorButton;
-       // padding: 9px 9px 6px 9px;
-        border-radius: 5px;
-       
-      }
+        padding: 9px 9px 5px 9px;
+       // border-radius: 5px;
+        justify-self: flex-end;
+    }
       .yith-add-to-wishlist-button-block {
         width: 50px;
       }
@@ -202,11 +209,11 @@
       
         .cart {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            column-gap: 10px;
+           align-self: flex-start;
         }
         .yith-wcwl-add-to-wishlist-button  {
-            color: $ColorWhite;
+            color: $ColorThemePrimary;
         }
     }
     .product-type-variable {
@@ -313,7 +320,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    max-width: 100%;
     .variations_button {
         display: flex;
         align-items: center;
@@ -324,6 +330,7 @@
         flex-direction: column;
         row-gap: 10px;
         align-items: flex-start;
+     
         .woocommerce-variation-description {
             padding: 5px;
         }
@@ -439,7 +446,6 @@
             padding: 0 10px;
         }
     }
-   
 }
 .product-type-simple {
       
@@ -448,8 +454,5 @@
         align-items: center;
         gap: 10px;
         align-self: flex-start;
-    }
-    .single_add_to_cart_button {
-        height: 42px;
     }
 }

@@ -1,9 +1,10 @@
-.post-type-archive-product {
-    .product
+.post-type-archive-product, .cartcarusel {
+    .product {
     .button {
         width: 80%;
         margin: 0 auto;
     } 
+}
 }
 .shop {
     .product:hover {
@@ -37,12 +38,10 @@
         }
     }
   }
-
-  
     .product {
         
         .button {
-           
+          
             background-color: $ColorButtonShop;
             i {
                 margin: 0 5px 0 0;

@@ -58,7 +58,7 @@
 				<div class="header__menu-category">
 				<?php if( has_nav_menu('menu-category') ) { ?>
 					<div class="header__menu-category-wrapp">
-					<i class="icon-bars"></i><a class="header__menu-category-link" href="javascript:void(0);"><span>Категории</span></a>
+					<a class="header__menu-category-link" href="javascript:void(0);"><i class="icon-bars"></i><span>Категории</span></a>
 					<nav class="header__menu-cat">
 					<?php Theme_menu_category(); ?>
 					</nav>

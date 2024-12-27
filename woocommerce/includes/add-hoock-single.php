@@ -77,6 +77,13 @@ function  theme_show_product_img() { ?>
 
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 10);  
 
-
+add_action('woocommerce_single_product_summary', 'theme_add_to_cart_wrapper', 25); 
+function theme_add_to_cart_wrapper() { ?>
+<div class="shop__add_to_cart_wrapper">
+<? }
+add_action('woocommerce_single_product_summary', 'theme_add_to_cart_wrapper_end', 35);
+function theme_add_to_cart_wrapper_end() { ?>
+</div><!--add_to_cart_wrapper_end-->
+<?php }
 
 

@@ -12,7 +12,7 @@ contact form 7
 
 WP Rocket
 
-не применять сжатие
+Отклюключить отложенную загрузку js
 
 mega menu 
 
